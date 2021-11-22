@@ -1,0 +1,14 @@
+<wxs module='theming' src='../../filter/theming.wxs'/>
+<view class='page settings {{ theme }}'>
+
+
+
+    <form class='id' bindsubmit="logout" report-submit='{{true}}'>
+      <button form-type="submit" class='logout borderless'>
+        <image mode='aspectFit' src='{{ theming.iconFolder(theme) }}/sign-out.svg'></image>
+        <text class='text'>Sign Out</text>
+      </button>
+    </form>
+
+
+</view>

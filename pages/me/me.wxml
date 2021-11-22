@@ -1,0 +1,22 @@
+<wxs module='theming' src='../../filter/theming.wxs'/>
+<view class='page {{ theme }}'>
+  <tabs active='{{tab}}' bind:change='changeTab' custom-class='{{ theme }}' sticky swipeable>
+    <tab title='Overview'>
+      <profile user='{{user}}' wx:if='{{user}}' theme='{{ theme }}'></profile>
+    </tab>
+    <tab title='collect'>
+      <repos repos='{{starred}}'></repos>
+      <view class='loading' wx:if='{{loadingMore}}'>
+        <loading type='spinner' color="#fff" />
+      </view>
+    </tab>
+  </tabs>
+  <view class='login-prompt' wx:if='{{!user}}'>
+    <navigator url='/pages/login/login' >Sign In</navigator>
+  </view>
+  <navigator class='settings' url='/pages/settings/settings' wx:if='{{tab===0}}'>
+    <image mode='aspectFit' src='{{ theming.iconFolder(theme) }}/gear.svg'></image>
+    <text class='settings-text'>Settings</text>
+  </navigator>
+  
+</view>

@@ -1,0 +1,7 @@
+<view class='page news {{theme}}'>
+  <tabs bind:change='changeTab' custom-class='{{ theme }}' sticky>
+    <tab title='Activities'>
+      <activities events='{{events}}' loading='{{loadingMoreActivity}}'></activities>
+    </tab>
+  </tabs>
+</view>

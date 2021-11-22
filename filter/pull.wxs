@@ -1,0 +1,22 @@
+var format = function (issue) {
+  var repoFullNameRegExp = getRegExp('^https://api.github.com/repos/(.*/.*)/(issues|pulls)/\d+$')
+  var url = issue.url || (issue.pull_request || {}).url || ''
+  if (!url) {
+    return ''
+  }
+
+
+  var repoFullName = url.replace(repoFullNameRegExp, '$1')
+
+  var isRelativeTime = getRegExp(' ago$').test(issue.updated_at)
+
+  if (issue.state === 'closed') {
+    return repoFullName + '#' + issue.number + ' ' + issue.state + (isRelativeTime ? ' ' + issue.updated_at : (' at ' + issue.updated_at))
+  }
+
+  return repoFullName + '#' + issue.number + ' updated ' + (isRelativeTime ? ' ' + issue.updated_at : (' at ' + issue.updated_at))
+};
+
+module.exports = {
+  format: format
+};

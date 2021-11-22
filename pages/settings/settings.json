@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Settings",
+  "usingComponents": {
+    "cell": "../../components/cell/index"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "loading": "../../components/loading/index",
+    "tabs": "../../../components/tabs/index",
+    "tab": "../../../components/tab/index",
+    "profile": "../../../components/profile/profile",
+    "repos": "../../../components/repo-list/repo-list"
+  }
+}

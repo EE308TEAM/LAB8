@@ -1,0 +1,19 @@
+<view class='page {{ theme }}'>
+  <tabs bind:change='changeTab' theme='{{ theme }}' sticky swipeable>
+    <tab title='Overview'>
+      <profile user='{{user}}'></profile>
+    </tab>
+    <tab title='Repositories'>
+      <repos repos='{{repos}}'></repos>
+      <view class='loading' wx:if='{{loadingMore}}'>
+        <loading type='spinner' color="#fff" />
+      </view>
+    </tab>
+    <tab title='Starred'>
+      <repos repos='{{starred}}'></repos>
+      <view class='loading' wx:if='{{loadingMore}}'>
+        <loading type='spinner' color="#fff" />
+      </view>
+    </tab>
+  </tabs>
+</view>

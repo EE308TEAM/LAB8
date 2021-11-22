@@ -1,0 +1,46 @@
+{
+    "pages": [
+        "pages/news/news",
+        "pages/trends/trends",
+        "pages/me/me",
+        "pages/login/login",
+        "pages/repo-detail/repo-detail",
+        "pages/comment-edit/comment-edit",
+        "pages/das/das"
+    ],
+    "window": {
+        "backgroundColor": "#328EEB",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#328EEB",
+        "navigationBarTitleText": "Gitlearn",
+        "navigationBarTextStyle": "black",
+        "onReachBottomDistance": 100
+    },
+    "tabBar": {
+        "color": "#000000",
+        "selectedColor": "#328EEB",
+        "borderStyle": "white",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/news/news",
+                "text": "News",
+                "iconPath": "octicons/tab/dark/github.png",
+                "selectedIconPath": "octicons/tab/selected/github.png"
+            },
+            {
+                "pagePath": "pages/trends/trends",
+                "text": "Search",
+                "iconPath": "octicons/tab/dark/flame.png",
+                "selectedIconPath": "octicons/tab/selected/flame.png"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "text": "Me",
+                "iconPath": "octicons/tab/dark/account.png",
+                "selectedIconPath": "octicons/tab/selected/account.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

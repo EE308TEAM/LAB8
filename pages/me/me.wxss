@@ -1,0 +1,65 @@
+@import '../../style/base.wxss';
+
+page {
+  font-size: 30rpx;
+}
+
+.login-prompt {
+  position: absolute;
+  bottom: 40%;
+  width: 100%;
+  text-align: center;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.login-prompt navigator {
+  font-size: 40rpx;
+  color: #000000;
+  width: 100%;
+  margin-top: 40rpx;
+}
+
+button.feedback {
+  display: -webkit-flex;
+  align-items: center;
+  line-height: inherit;
+  background-color: transparent;
+  color: #eee;
+  font-weight: bold;
+}
+
+.about, .feedback, .logout, .settings {
+  display: flex;
+  padding: 30rpx 40rpx;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.about image, .feedback image, .logout image, .settings image {
+  width: 50rpx;
+  height: 50rpx;
+  min-width: 50rpx;
+  min-height: 50rpx;
+}
+
+.about text, .feedback text, .logout text, .settings text {
+  margin-left: 20rpx;
+  display: -webkit-flex;
+  align-items: center;
+  line-height: inherit;
+}
+
+.loading {
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+}
+
+.oled .van-tabs__wrap {
+  background-color: #000;
+}

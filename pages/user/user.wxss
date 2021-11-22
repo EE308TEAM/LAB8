@@ -1,0 +1,18 @@
+@import '../../style/base.wxss';
+
+page {
+  font-size: 30rpx;
+}
+
+.login-button {
+  color: #fff;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.loading {
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+}

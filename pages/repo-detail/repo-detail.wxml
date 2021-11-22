@@ -1,0 +1,23 @@
+<import src="../../lib/wxParse/wxParse.wxml"/>
+<wxs module='theming' src='../../filter/theming.wxs'/>
+<view class='page repo {{ theme }}'>
+  <view class='header'>
+    <image mode='aspectFit' class='avatar' src='{{repo.owner.avatar_url}}' catchtap='toUserDetail'></image>
+    <view class='name-time'>
+      <text class='name title'>{{repo.full_name || repoName}}</text>
+    </view>
+  </view>
+  <view class='stats {{ license ? "has-license" : "" }}'>
+    <view class='star' catchtap='toggleStar'>
+      <image mode='aspectFit' src='{{ theming.iconFolder(theme) }}/star.svg'></image>
+      <text>{{'collect'}}</text>
+    </view>
+  </view>
+  <tabs bind:change='changeTab' wx:if='{{showTabs}}' active='{{ tab }}' custom-class='{{ theme }}' sticky animated>
+    <tab title='content'>
+      <view class='readme'>
+        <md md='{{readme}}'></md>
+      </view>
+    </tab>
+  </tabs>
+</view>

@@ -1,0 +1,26 @@
+<wxs module='theming' src='../../filter/theming.wxs'/>
+<view class='wrapper page {{ theme }}'>
+  <view class='main'>
+    <view class='logo'>
+    </view>
+    <tabs>
+      <tab title='账号密码'>
+        <form class='form' bindsubmit='commitAccount' report-submit='{{true}}'>
+          <view>
+            <input name='username' placeholder='输入账号' focus></input>
+            <input name='password' placeholder='输入密码' password='true' value='{{password}}'></input>
+          </view>
+          <button class='login' formType='submit'>登陆</button>
+        </form>
+      </tab>
+      <tab title='Token'>
+        <form class='form' bindsubmit='commitToken'>
+          <view>
+            <input name='token' placeholder='输入 Token' focus></input>
+          </view>
+          <button class='login' formType='submit'>登陆</button>
+        </form>
+      </tab>
+    </tabs>
+  </view>
+</view>
